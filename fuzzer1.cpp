@@ -3,7 +3,7 @@
 extern "C" int LLVMFuzzerTestOneInput(const char *data, size_t size) {
 
 folly::StringPiece bin1(data, size);
-folly::IPAddress::tryCreateNetwork(data);
+folly::IPAddress::tryCreateNetwork(bin1);
 
         return 0;
 }
