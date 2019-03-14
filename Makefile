@@ -9,4 +9,4 @@ clean:
         rm -rf ipaddr
 
 Fuzzer: fuzzer.cpp
-        $(CXX) -o ipaddr -ggdb fuzzer.cpp -I$(FOLLY)/include $(FOLLY)/_build/libfolly.so -fsanitize=fuzzer,undefined -fsanitize-recover=address -lfolly -lboost_system -lglog
+        $(CXX) -o ipaddr -ggdb fuzzer.cpp -I$(FOLLY)/include $(FOLLY)/_build/libfolly.so -fsanitize=fuzzer,undefined,address -lfolly -lboost_system -lglog
